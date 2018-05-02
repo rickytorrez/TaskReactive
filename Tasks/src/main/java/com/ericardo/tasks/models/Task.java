@@ -1,0 +1,61 @@
+package com.ericardo.tasks.models;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+@Entity
+public class Task {
+
+	@Id
+	@GeneratedValue
+	private long id;
+	
+	private String title;
+	
+	private String description;
+	
+	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
+	private Date createdAt;
+	
+	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
+	private Date updatedAt;
+	
+	@PrePersist
+	public void onCreate(){this.createdAt = new Date();}
+	@PreUpdate
+	public void onUpdate(){this.updatedAt = new Date();}
+	
+	
+	public Task() {}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+}

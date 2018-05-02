@@ -1,0 +1,6 @@
+package com.ericardo.tasks.repositories;
+
+@Repository
+public interface TaskRepository {
+
+}

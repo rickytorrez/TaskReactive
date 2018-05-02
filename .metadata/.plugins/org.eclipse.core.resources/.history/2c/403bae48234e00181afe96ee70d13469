@@ -1,0 +1,5 @@
+package com.ericardo.tasko.services;
+
+public interface TaskService {
+
+}

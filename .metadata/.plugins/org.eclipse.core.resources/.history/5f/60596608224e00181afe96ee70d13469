@@ -1,0 +1,5 @@
+package com.ericardo.tasko.models;
+
+public class TasksModel {
+
+}

@@ -1,0 +1,32 @@
+package com.ericardo.tasko.controllers;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ericardo.tasko.models.Task;
+import com.ericardo.tasko.services.TaskService;
+
+@Controller
+public class TaskController {
+	
+	@Autowired
+	TaskService _tS;
+
+	// Route
+	@RequestMapping("/")
+	public String index() {
+		return "createTask";
+	}
+	
+	// Post Method
+	@PostMapping("/createTask")
+	public String createTask(@ModelAttribute("task") Task task) {
+		_tS.saveTask(task);
+		return "taskList";
+	}
+	
+}

@@ -1,0 +1,27 @@
+package com.ericardo.tasko.controllers;
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ericardo.tasko.services.TaskService;
+
+@Controller
+public class TaskController {
+	
+	TaskService _tS;
+
+	// Route
+	@RequestMapping("/")
+	public String index() {
+		return "createTask";
+	}
+	
+	// Post Method
+	@PostMapping("/createTask")
+	public String createTask() {
+		return "taskList";
+	}
+	
+}

@@ -1,0 +1,39 @@
+package com.ericardo.tasko.services;
+
+import java.util.List;
+
+import com.ericardo.tasko.models.Task;
+
+public class TaskServiceImpl implements TaskService {
+
+	@Override
+	public Task saveTask(Task task) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Task updateTask(Task task) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Task deletetask(Task task) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Task getOneTask(Task task) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Task> getAllTasks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
