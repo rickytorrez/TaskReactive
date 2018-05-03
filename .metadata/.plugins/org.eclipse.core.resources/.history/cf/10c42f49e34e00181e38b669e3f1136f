@@ -31,7 +31,7 @@ public class TaskController {
 	
 	@PostMapping("new")
 	public String createTask(@RequestBody Task task) {
-		System.out.println(task.getTitle());
+		System.out.println(task);
 		return _tS.create(task);
 	}
 	

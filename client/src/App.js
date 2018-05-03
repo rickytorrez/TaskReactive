@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import TaskList from './Components/TaskList';
+import TaskInput from './Components/TaskInput';
 
 class App extends Component {
   render() {
@@ -12,7 +13,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        
+
+        <TaskInput />
         <TaskList />
       </div>
     );
