@@ -12,11 +12,11 @@ class TaskInput extends Component {
     }
 
     descriptionHandleChange = event => {
-        this.setState({ description: event.target.value })
+        this.setState({ description: event.target.value });
     }
 
     handleSubmit = event => {
-        event.preventDefault();
+        // event.preventDefault();                  // Let the components render since app is working
         const task = {
             title: this.state.title,
             description: this.state.description
